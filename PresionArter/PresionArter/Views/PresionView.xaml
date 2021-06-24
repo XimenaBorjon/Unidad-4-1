@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PresionArter.ViewModels"
+             x:Class="PresionArter.Views.PresionView">
+    <ContentPage.BindingContext>
+        <vm:PresionArtViewModel x:Name="Referencia"></vm:PresionArtViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem  Text="Nuevo" Command="{Binding NavegarAgregarCommand}" ></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Margin="10"  BackgroundColor="Lavender">
+
+
+
+
+        <Grid BackgroundColor="#9E7DB4" HeightRequest="20">
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="11.5"></Setter>
+                    <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+
+                    <Setter Property="FontFamily" Value="Arial black"></Setter>
+                    <Setter Property="HeightRequest" Value="30"></Setter>
+                    <Setter Property="TextColor" Value="Black"></Setter>
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+                <ColumnDefinition Width=".5*"></ColumnDefinition>
+
+                <ColumnDefinition Width=".3*"></ColumnDefinition>
+                <ColumnDefinition Width=".5*"></ColumnDefinition>
+
+
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Text="Pulso"></Label>
+            <Label Grid.Column="1" Text="Fecha"></Label>
+
+            <Label Grid.Column="2" Text="Diastolica"></Label>
+            <Label Grid.Column="3" Text="Sistolica"></Label>
+
+
+        </Grid>
+        <CollectionView ItemsSource="{Binding Verpresiones}">
+            <CollectionView.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="9.5"></Setter>
+                    <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+                    <Setter Property="TextColor" Value="DarkBlue"></Setter>
+                    <Setter Property="FontFamily" Value="Arial black"></Setter>
+                    <Setter Property="BackgroundColor" Value="Azure"></Setter>
+
+                </Style>
+            </CollectionView.Resources>
+            <CollectionView.ItemTemplate  >
+                <DataTemplate>
+                    <Grid BackgroundColor="#99ECFF" Padding="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".1*"></ColumnDefinition>
+                            <ColumnDefinition Width=".5*"></ColumnDefinition>
+                            <ColumnDefinition Width=".1*"></ColumnDefinition>
+                            <ColumnDefinition Width=".1*"></ColumnDefinition>
+                            <ColumnDefinition Width=".2*"></ColumnDefinition>
+                            <ColumnDefinition Width=".2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="{Binding Pulso}"></Label>
+                        <Label Grid.Column="3" Text="{Binding Diastolica}"></Label>
+                        <Label Grid.Column="4" Text="{Binding Sistolica}"></Label>
+                        <Label Grid.Column="1" Text="{Binding Fecha }"></Label>
+                        <StackLayout  Grid.Column="5" Orientation="Horizontal">
+
+                            <Image  Source="editar.png" HeightRequest="16">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference Referencia}, Path=NavegarEditarCommand }" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Margin="5,0,0,0" Source="eliminar.png" HeightRequest="16">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference Referencia}, Path=NavegarEliminarCommand }" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                        </StackLayout>
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+
+
+    </StackLayout>
+</ContentPage>

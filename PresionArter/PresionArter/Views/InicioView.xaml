@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PresionArter.ViewModels"
+             x:Class="PresionArter.Views.InicioView">
+    <ContentPage.BindingContext>
+        <local:PresionArtViewModel x:Name="Referencia"></local:PresionArtViewModel>
+    </ContentPage.BindingContext>
+    <Grid Background="White">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="auto" ></RowDefinition>
+            <RowDefinition Height="auto" ></RowDefinition>
+            <RowDefinition Height="270"  ></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Frame   BorderColor="Indigo" CornerRadius="30" HasShadow="True" BackgroundColor="#8C84BF" Margin="10,18,10,0"  >
+            <Label HorizontalOptions="Center"  FontSize="25" FontAttributes="Italic" >Registra tu Presion Arterial</Label>
+        </Frame>
+        <Image Grid.Row="1" Source="cora.png" x:Name="Clickimagen"></Image>
+        <Frame Grid.Row="2" BorderColor="White" CornerRadius="30" HasShadow="True" BackgroundColor="#49A3F2" Margin="30,10,30,183"  >
+            <Button  HorizontalOptions="Center" Clicked="Button_Clicked"
+              
+            BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" FontSize="15" HeightRequest="100" WidthRequest="300" TextColor="White"  Text="Pulsa Aqui" ></Button>
+        </Frame>
+    </Grid>
+
+
+
+</ContentPage>

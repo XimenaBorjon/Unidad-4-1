@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresionArter.Android", "PresionArter\PresionArter.Android\PresionArter.Android.csproj", "{1C7CD979-77E0-4BBA-8405-EF02AB8AE6EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresionArter", "PresionArter\PresionArter\PresionArter.csproj", "{A6EE1628-FA17-4B44-98C8-7907510A17C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C7CD979-77E0-4BBA-8405-EF02AB8AE6EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C7CD979-77E0-4BBA-8405-EF02AB8AE6EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C7CD979-77E0-4BBA-8405-EF02AB8AE6EA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1C7CD979-77E0-4BBA-8405-EF02AB8AE6EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C7CD979-77E0-4BBA-8405-EF02AB8AE6EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C7CD979-77E0-4BBA-8405-EF02AB8AE6EA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A6EE1628-FA17-4B44-98C8-7907510A17C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6EE1628-FA17-4B44-98C8-7907510A17C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6EE1628-FA17-4B44-98C8-7907510A17C4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A6EE1628-FA17-4B44-98C8-7907510A17C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6EE1628-FA17-4B44-98C8-7907510A17C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6EE1628-FA17-4B44-98C8-7907510A17C4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {913E3C94-08B1-48FE-AC8F-FA326B422C1F}
+	EndGlobalSection
+EndGlobal
