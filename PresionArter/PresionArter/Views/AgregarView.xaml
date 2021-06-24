@@ -2,13 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PresionArter.Views.AgregarView" Title="AGREGAR">
-    <StackLayout BackgroundColor="#B9FCFD">
+    <StackLayout BackgroundColor="#8C84BF">
         <StackLayout.Resources>
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="Large"></Setter>
                 <Setter Property="HorizontalOptions" Value="Center"></Setter>
                 <Setter Property="BackgroundColor" Value="Transparent"></Setter>
-                <Setter Property="TextColor" Value="MidnightBlue"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
             </Style>
             <Style TargetType="Entry">
                 <Setter Property="BackgroundColor" Value="White"></Setter>
@@ -29,16 +29,16 @@
                 <Setter Property="TextColor" Value="Black"></Setter>
             </Style>
         </StackLayout.Resources>
-        <Label>Pulso</Label>
+        <Label Text="Pulso"></Label>
         <Entry Text="{Binding Presion.Pulso}" Keyboard="Numeric"></Entry>
-        <Label>Fecha</Label>
+        <Label Text="Fecha"></Label>
         <DatePicker Date="{Binding Presion.Fecha}"></DatePicker>
-        <Label>Diastolica</Label>
+        <Label Text="Diastolica"></Label>
         <Entry Text="{Binding Presion.Diastolica}" Keyboard="Numeric"></Entry>
-        <Label>Sistolica</Label>
+        <Label Text="Sistolica"></Label>
         <Entry Text="{Binding Presion.Sistolica}" Keyboard="Numeric"></Entry>
 
-        <Button Command="{Binding AgregarPresionCommand}" Margin="5" BackgroundColor="#FF4517" FontSize="20" TextColor="White" Text="AGREGAR"></Button>
+        <Button Command="{Binding AgregarPresionCommand}" Margin="5" BackgroundColor="#460259" FontSize="20" TextColor="White" Text="AGREGAR"></Button>
         <Label Margin="10" FontSize="10" TextColor="Maroon" Text="{Binding ErrorValidacion}" ></Label>
 
 

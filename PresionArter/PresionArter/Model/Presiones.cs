@@ -29,17 +29,17 @@ namespace PresionArter.Model
 
         public void Insert(Presion p)
         {
-            if (string.IsNullOrWhiteSpace(p.Pulso.ToString()))
+            if (p.Pulso.ToString() == "0")
             {
-                throw new ArgumentException("Ingrese un pulso");
+                throw new ArgumentException("El pulso esta vacio");
             }
-            if (string.IsNullOrWhiteSpace(p.Diastolica.ToString()))
+            if (p.Diastolica.ToString() == "0")
             {
-                throw new ArgumentException("Ingrese la diastolica");
+                throw new ArgumentException("El Diastolica esta vacio");
             }
-            if (string.IsNullOrWhiteSpace(p.Sistolica.ToString()))
+            if (p.Sistolica.ToString() == "0")
             {
-                throw new ArgumentException("Ingrese una sistolica");
+                throw new ArgumentException("La Sistolica esta vacia esta vacia");
             }
 
             Conexion.Insert(p);
@@ -57,17 +57,17 @@ namespace PresionArter.Model
 
         public void Update(Presion p)
         {
-            if (string.IsNullOrWhiteSpace(p.Pulso.ToString()))
+            if (p.Pulso.ToString() == "0")
             {
-                throw new ArgumentException("Ingrese un pulso");
+                throw new ArgumentException("El pulso esta vacio");
             }
-            if (string.IsNullOrWhiteSpace(p.Diastolica.ToString()))
+            if (p.Diastolica.ToString() == "0")
             {
-                throw new ArgumentException("Ingrese una diastolica");
+                throw new ArgumentException("El Diastolica esta vacio");
             }
-            if (string.IsNullOrWhiteSpace(p.Sistolica.ToString()))
+            if (p.Sistolica.ToString() == "0")
             {
-                throw new ArgumentException("Ingrese la sostolica");
+                throw new ArgumentException("La Sistolica esta vacia esta vacia");
             }
 
             var citabd = Get(p.Id);

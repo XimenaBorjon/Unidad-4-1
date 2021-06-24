@@ -54,7 +54,7 @@ namespace PresionArter.ViewModels
         public PresionArtViewModel()
         {
             NavegarAgregarPresionCommand = new Command(NavegarAgregar);
-            //NavegarRegistroReservacionCommand = new Command(NavegarRegistro);
+            
             NavegarEditarCommand = new Command<Presion>(NavegarEditar);
             NavegarEliminarCommand = new Command<Presion>(NavegarEliminar);
             AgregarPresionCommand = new Command(Agregar);
@@ -100,6 +100,7 @@ namespace PresionArter.ViewModels
         }
         private void CargarReservaciones()
         {
+            Verpresiones = new ObservableCollection<Presion>();
             PrecionesFiltradas.Clear();
             var a = presiones.GetAll();
 
@@ -107,6 +108,7 @@ namespace PresionArter.ViewModels
             {
                 Verpresiones.Add(item);
             }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null));
         }
         public void Editar()
         {
@@ -154,7 +156,11 @@ namespace PresionArter.ViewModels
         {
             ErrorValidacion = "";
             Presion = new Presion();
-            Application.Current.MainPage.Navigation.PushAsync(agregarregistros);
+            {
+                ErrorValidacion = "";
+                Presion = new Presion();
+                Application.Current.MainPage.Navigation.PushAsync(agregarregistros = new AgregarView() { BindingContext = this });
+            }
         }
 
 

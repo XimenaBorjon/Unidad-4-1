@@ -6,9 +6,7 @@
     <ContentPage.BindingContext>
         <vm:PresionArtViewModel x:Name="Referencia"></vm:PresionArtViewModel>
     </ContentPage.BindingContext>
-    <ContentPage.ToolbarItems>
-        <ToolbarItem  Text="Nuevo" Command="{Binding NavegarAgregarCommand}" ></ToolbarItem>
-    </ContentPage.ToolbarItems>
+   
 
     <StackLayout Margin="10"  BackgroundColor="Lavender">
 
@@ -86,9 +84,11 @@
 
                     </Grid>
                 </DataTemplate>
+                
             </CollectionView.ItemTemplate>
-
+            
         </CollectionView>
+        <Button Text="AGREGAR" Background="#5B0373"    Command="{Binding NavegarAgregarPresionCommand }"></Button>
 
 
 

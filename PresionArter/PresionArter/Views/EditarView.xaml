@@ -28,14 +28,14 @@
                 <Setter Property="HeightRequest" Value="40"></Setter>
             </Style>
         </StackLayout.Resources>
-        <Label>Pulso</Label>
+        <Label Text="Pulso"></Label>
         <Entry TextColor="Black" Text="{Binding Presion.Pulso}" Keyboard="Chat"></Entry>
-        <Label>Fecha</Label>
-        <DatePicker TextColor="Black" Date="{Binding Presion.Diastolica}"></DatePicker>
-        <Label>Diastolica</Label>
-        <Entry TextColor="Black" Text="{Binding Presion.Sistolica}" Keyboard="Numeric"></Entry>
-        <Label>Sistolica</Label>
-        <Entry TextColor="Black" Text="{Binding Presion.Fecha}" Keyboard="Telephone"></Entry>
+        <Label Text="Fecha" ></Label>
+        <DatePicker TextColor="Black" Date="{Binding Presion.Fecha}"></DatePicker>
+        <Label Text="Diastolica"></Label>
+        <Entry TextColor="Black" Text="{Binding Presion.Diastolica}" Keyboard="Numeric"></Entry>
+        <Label Text=""></Label>
+        <Entry TextColor="Black" Text="{Binding Presion.Sistolica}" Keyboard="Telephone"></Entry>
 
         <Button Command="{Binding EditarCommand}" FontSize="20"  Margin="5" BackgroundColor="#3A1031" TextColor="White" Text="EDITAR PRESION"></Button>
         <Label Margin="10" FontSize="10" TextColor="Maroon" Text="{Binding ErrorValidacion}"></Label>
